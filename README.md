@@ -107,9 +107,9 @@ performance-related tips.
   It appears that onionbalance supports loading usual
   `hs_ed25519_secret_key` key so it should work.
   
-*What is the hashing algorithm?
+* What is the hashing algorithm?
 
-[Argon2id](https://github.com/GiverofMemory/mkp224o/blob/master/main.c#L44) learn more about the [algorithm](https://en.wikipedia.org/wiki/Argon2)
+  [Argon2id](https://github.com/GiverofMemory/mkp224o/blob/master/main.c#L44) learn more about the [algorithm](https://en.wikipedia.org/wiki/Argon2)
 
 ### Acknowledgements & Legal
 
