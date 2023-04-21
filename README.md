@@ -58,6 +58,9 @@ performance-related tips.
   keys for onions starting with "neko" in this example; use `./mkp224o
   -d nekokeys neko` to not litter current directory and put all
   discovered keys in directory named "nekokeys".
+  
+  In windows you can install [https://gitforwindows.org/][git bash], then open up the
+  unzipped folder and right click in the blank space.  Click 'git bash here' then run the above command
 
 * How do I make tor use generated keys?
 
