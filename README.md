@@ -59,8 +59,8 @@ performance-related tips.
   -d nekokeys neko` to not litter current directory and put all
   discovered keys in directory named "nekokeys".
   
-  In windows you can install [https://gitforwindows.org/][git bash], then open up the
-  unzipped folder and right click in the blank space.  Click 'git bash here' then run the above command
+  In Windows you can install [git bash](https://gitforwindows.org/), then open up the
+  unzipped mkp224o folder and right click in the blank space.  Click 'git bash here' then run the above command
 
 * How do I make tor use generated keys?
 
@@ -99,7 +99,7 @@ performance-related tips.
   more than few tens of minutes, if using batch mode (read
   [OPTIMISATION.txt][OPTIMISATION]) 7 characters can take hours
   to days.\
-  No promisses though, it depends on pure luck.
+  No promisses though, it depends on pure luck. some guesstimates [here](https://www.jamieweb.net/blog/onionv3-vanity-address/#generation-times)
 
 * Will this work with onionbalance?
 
