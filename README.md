@@ -99,12 +99,17 @@ performance-related tips.
   more than few tens of minutes, if using batch mode (read
   [OPTIMISATION.txt][OPTIMISATION]) 7 characters can take hours
   to days.\
-  No promisses though, it depends on pure luck. some guesstimates [here](https://www.jamieweb.net/blog/onionv3-vanity-address/#generation-times)
+  No promisses though, it depends on pure luck. 
+  Some guesstimates [here](https://www.jamieweb.net/blog/onionv3-vanity-address/#generation-times)
 
 * Will this work with onionbalance?
 
   It appears that onionbalance supports loading usual
   `hs_ed25519_secret_key` key so it should work.
+  
+*What is the hashing algorithm?
+
+[Argon2id](https://github.com/GiverofMemory/mkp224o/blob/master/main.c#L44) learn more about the [algorithm](https://en.wikipedia.org/wiki/Argon2)
 
 ### Acknowledgements & Legal
 
