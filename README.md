@@ -102,6 +102,9 @@ performance-related tips.
   No promisses though, it depends on pure luck. 
   Some guesstimates [here](https://www.jamieweb.net/blog/onionv3-vanity-address/#generation-times)
 
+  Every 10 years, everything else bieng the same, you will be able to find
+  one more digit according to moores law
+
 * Will this work with onionbalance?
 
   It appears that onionbalance supports loading usual
