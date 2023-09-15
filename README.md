@@ -81,7 +81,7 @@ performance-related tips.
   Then edit `torrc` and add new service with that folder.\
   After reload/restart tor should pick it up.
 
-* Generate addresses with `1-2` and `7-9` digits?
+* How to generate addresses with `0-1` and `8-9` digits?
 
   Onion addresses use base32 encoding which does not include `0,1,8,9`
   numbers.\
@@ -113,6 +113,15 @@ performance-related tips.
 * What is the hashing algorithm?
 
   [Argon2id](https://github.com/GiverofMemory/mkp224o/blob/master/main.c#L44) learn more about the [algorithm](https://en.wikipedia.org/wiki/Argon2)
+
+* Is there a docker image?
+
+  Yes, if you do not wish to compile mkp224o yourself, you can use
+  the `ghcr.io/cathugger/mkp224o` image like so:
+
+  ```bash
+  docker run --rm -it -v $PWD:/keys ghcr.io/cathugger/mkp224o:master -d /keys neko
+  ```
 
 ### Acknowledgements & Legal
 

@@ -58,6 +58,8 @@ size_t workdirlen = 0;
 
 pthread_mutex_t determseed_mutex;
 u8 determseed[SEED_LEN];
+int pw_skipnear = 0;
+int pw_warnnear = 0;
 #endif
 
 
@@ -71,7 +73,7 @@ char *makesname(void)
 	return sname;
 }
 
-static void onionready(char *sname,const u8 *secret,const u8 *pubonion)
+static void onionready(char *sname,const u8 *secret,const u8 *pubonion,int warnnear)
 {
 	if (endwork)
 		return;
@@ -122,6 +124,15 @@ static void onionready(char *sname,const u8 *secret,const u8 *pubonion)
 		}
 		if (fout) {
 			pthread_mutex_lock(&fout_mutex);
+#ifdef PASSPHRASE
+			const char * const pwarn = " warn:near\n";
+			if (warnnear)
+				strcpy(&sname[onionendpos],pwarn);
+			const size_t oprintlen = printlen;
+			const size_t printlen = oprintlen + (warnnear ? strlen(pwarn)-1 : 0);
+#else
+			(void) warnnear;
+#endif
 			fwrite(&sname[printstartpos],printlen,1,fout);
 			fflush(fout);
 			pthread_mutex_unlock(&fout_mutex);
@@ -150,6 +161,7 @@ union pubonionunion {
 	} i;
 } ;
 
+/*
 // little endian inc
 static void addsk32(u8 *sk)
 {
@@ -160,6 +172,7 @@ static void addsk32(u8 *sk)
 		if (!c) break;
 	}
 }
+*/
 
 // 0123 4567 xxxx --3--> 3456 7xxx
 // 0123 4567 xxxx --1--> 1234 567x
